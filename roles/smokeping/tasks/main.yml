@@ -15,15 +15,15 @@
   notify:
     - restart smokeping
 
-- name: link to smokeping config in /etc/apache2/conf-available
-  command: creates=/etc/apache2/conf-available/smokeping.conf chdir=/etc/apache2/conf-available ln -s ../../smokeping/apache2.conf smokeping.conf
-  when: ansible_distribution_version not in ["12.04", "12.10", "13.04"]
-  tags: smokeping
+# - name: link to smokeping config in /etc/apache2/conf-available
+#   command: creates=/etc/apache2/conf-available/smokeping.conf chdir=/etc/apache2/conf-available ln -s ../../smokeping/apache2.conf smokeping.conf
+#   when: ansible_distribution_version not in ["12.04", "12.10", "13.04"]
+#   tags: smokeping
 
-- name: enable the smokeping apache2 configuration
-  command: a2enconf smokeping
-  when: ansible_distribution_version not in ["12.04", "12.10", "13.04"]
-  tags: smokeping
+# - name: enable the smokeping apache2 configuration
+#   command: a2enconf smokeping
+#   when: ansible_distribution_version not in ["12.04", "12.10", "13.04"]
+#   tags: smokeping
 
 - name: enable the cgid apache2 module
   command: a2enmod cgid

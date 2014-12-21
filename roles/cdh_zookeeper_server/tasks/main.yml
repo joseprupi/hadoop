@@ -4,7 +4,6 @@
 - name: install zookeeper-server via apt
   apt: name={{ item }} force=yes update-cache=yes
   with_items:
-    - zookeeper
     - zookeeper-server
   tags: zookeeper
 

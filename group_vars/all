@@ -1,4 +1,4 @@
-site_name: acme
+site_name: loyo
 
 # IPv4 maximum transmission unit, 9216 is the maximum for Intel/Cisco hardware
 mtu: 9216
