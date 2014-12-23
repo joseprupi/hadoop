@@ -21,7 +21,7 @@
           api_key={{ api_key_password }}
           size_id=62
           region_id=9
-          image_id=6918990
+          image_id=6374128
           wait=no
       with_items:
         - monitor01
@@ -39,7 +39,7 @@
           api_key={{ api_key_password }}
           size_id=62
           region_id=9
-          image_id=6918990
+          image_id=6374128
       register: hosts
       with_items:
         - monitor01
